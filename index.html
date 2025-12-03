@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caught-Slippin — Excuse & Apology Generator (Serious + Funny)</title>
+    <meta name="description" content="Need a quick excuse or apology? Generate serious or funny replies for missed plans, lateness, flubs, and more. Tips to prevent slipping up.">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Caught-Slippin — Find the Right Words">
+    <meta property="og:description" content="Fast, friendly excuse & apology generator with practical tips you can copy, share, and save.">
+    <meta property="og:image" content="/assets/img/og-image.jpg">
+    <meta property="og:url" content="https://caught-slippin.com">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Caught-Slippin — Find the Right Words">
+    <meta name="twitter:description" content="Fast, friendly excuse & apology generator with practical tips.">
+    <meta name="twitter:image" content="/assets/img/og-image.jpg">
+    
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/">Caught-Slippin</a>
+                </div>
+                <nav class="main-nav">
+                    <a href="#generator">Generator</a>
+                    <a href="#tips">Tips</a>
+                    <div class="dropdown">
+                        <button class="dropdown-toggle">Categories ▾</button>
+                        <div class="dropdown-menu">
+                            <a href="#late-for-work">Late for work</a>
+                            <a href="#missed-deadline">Missed a deadline</a>
+                            <a href="#missed-anniversary">Missed anniversary</a>
+                            <a href="#forgot-birthday">Forgot a birthday</a>
+                            <a href="#late-for-school">Late for school</a>
+                            <a href="#no-homework">No homework</a>
+                            <a href="#failed-test">Failed a test</a>
+                            <a href="#missed-date">Missed a date</a>
+                            <a href="#forgot-text">Forgot to text back</a>
+                            <a href="#double-booked">Double booked</a>
+                        </div>
+                    </div>
+                    <a href="https://dailyhelphub.com/?utm_source=caught-slippin&utm_medium=nav&utm_campaign=more_tools" target="_blank" rel="noopener">More Tools ▾</a>
+                    <a href="/about.html">About</a>
+                    <a href="/contact.html">Contact</a>
+                </nav>
+                <a href="#generator" class="cta-button">Get an Excuse</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Caught Slippin? Find the right words.</h1>
+            <p class="hero-subtitle">Fast, friendly excuse & apology generator with practical tips you can copy, share, and save.</p>
+        </div>
+    </section>
+
+    <!-- Generator Section -->
+    <section id="generator" class="generator-section">
+        <div class="container">
+            <div class="generator-card">
+                <h2>Generate Your Response</h2>
+                
+                <div class="generator-controls">
+                    <div class="form-group">
+                        <label for="category-select">What did you get caught slippin on?</label>
+                        <select id="category-select" aria-label="Choose excuse category">
+                            <option value="">Select a situation...</option>
+                            <option value="late-for-work">Late for work</option>
+                            <option value="missed-deadline">Missed a deadline</option>
+                            <option value="forgot-birthday">Forgot a birthday</option>
+                            <option value="missed-anniversary">Missed anniversary</option>
+                            <option value="late-for-school">Late for school</option>
+                            <option value="no-homework">No homework</option>
+                            <option value="failed-test">Failed a test</option>
+                            <option value="missed-date">Missed a date</option>
+                            <option value="forgot-text">Forgot to text back</option>
+                            <option value="double-booked">Double booked</option>
+                            <option value="fell-asleep">Fell asleep</option>
+                            <option value="no-show">Didn't show up</option>
+                            <option value="forgot-meeting">Forgot a meeting</option>
+                            <option value="work-mistake">Messed up at work</option>
+                            <option value="social-mistake">Social mistake (awkward moment)</option>
+                        </select>
+                    </div>
+
+                    <div class="tone-toggle">
+                        <label>Tone:</label>
+                        <div class="toggle-buttons">
+                            <button type="button" class="tone-btn active" data-tone="serious">Serious</button>
+                            <button type="button" class="tone-btn" data-tone="funny">Funny</button>
+                        </div>
+                    </div>
+
+                    <button id="generate-btn" class="generate-button">Get excuse</button>
+                </div>
+
+                <div id="result-container" class="result-container" style="display: none;">
+                    <div class="result-header">
+                        <span class="tone-label">Tone: <span id="result-tone">Serious</span></span>
+                    </div>
+                    <div id="result-text" class="result-text"></div>
+                    <p class="result-tip">💡 Tip: Start with a short apology to lower defenses</p>
+                    
+                    <div class="result-actions">
+                        <button id="copy-btn" class="action-btn primary" aria-label="Copy to clipboard">
+                            📋 Copy
+                        </button>
+                        <button id="sms-btn" class="action-btn">
+                            💬 Use as text
+                        </button>
+                        <button id="share-btn" class="action-btn">
+                            🔗 Share
+                        </button>
+                    </div>
+
+                    <div class="quick-actions">
+                        <button id="save-btn" class="quick-action-btn">
+                            💾 Save reply
+                        </button>
+                        <button id="rate-up-btn" class="quick-action-btn" title="Was this helpful?">
+                            👍
+                        </button>
+                        <button id="rate-down-btn" class="quick-action-btn" title="Was this helpful?">
+                            👎
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tips Strip -->
+    <section class="featured-tips">
+        <div class="container">
+            <h2>Featured Tips</h2>
+            <div class="featured-tips-grid">
+                <article class="tip-card featured" data-tip-id="tip-001">
+                    <h3>Start with a short apology</h3>
+                    <p>Begin with a quick "I'm sorry" — it lowers defenses and makes the rest of your explanation land better.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Communication</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card featured" data-tip-id="tip-002">
+                    <h3>Offer to make amends</h3>
+                    <p>Don't just apologize — suggest a concrete action. "Can I buy you lunch next week?" shows you're serious about making it right.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Relationships</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card featured" data-tip-id="tip-003">
+                    <h3>Keep it believable</h3>
+                    <p>Wild excuses backfire. Stick to simple, plausible reasons — they're harder to question and easier to remember if asked again.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Strategy</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Grid Section -->
+    <section id="tips" class="tips-section">
+        <div class="container">
+            <h2>Tips to stop getting caught slippin'</h2>
+            
+            <div class="tips-grid">
+                <article class="tip-card" data-tip-id="tip-004">
+                    <h3>Use calendar buffers</h3>
+                    <p>Add 15-minute buffers before and after every appointment. You'll never scramble for an excuse when traffic hits or a meeting runs long.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Planning</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-005">
+                    <h3>When to be honest</h3>
+                    <p>With close friends and partners, honesty usually beats excuses. "I forgot" plus genuine remorse often preserves trust better than elaborate stories.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Relationships</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-006">
+                    <h3>Never fake emergencies</h3>
+                    <p>Avoid claims about health, accidents, or family crises. They can backfire spectacularly and damage your credibility permanently.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Ethics</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-007">
+                    <h3>Use humor carefully</h3>
+                    <p>A light joke can defuse tension, but read the room. If they're genuinely upset, lead with sincerity before attempting humor.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Communication</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-008">
+                    <h3>Set phone reminders</h3>
+                    <p>Create recurring reminders for birthdays, anniversaries, and regular commitments. Your phone remembers so you don't have to.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Planning</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-009">
+                    <h3>Reply within 24 hours</h3>
+                    <p>Even a quick "Got this, will respond fully tomorrow" beats radio silence. It shows respect and buys you time to think.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Communication</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-010">
+                    <h3>Own mistakes at work</h3>
+                    <p>Bosses respect accountability. "I messed up, here's my fix" beats excuses. Come with solutions, not justifications.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Work</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-011">
+                    <h3>Learn from patterns</h3>
+                    <p>If you're using the same excuse repeatedly, fix the root cause. Chronic lateness? Leave earlier. Forgetting dates? Digital calendar.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Self-improvement</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card" data-tip-id="tip-012">
+                    <h3>Actions speak louder</h3>
+                    <p>Follow up your excuse with changed behavior. Show up early next time, deliver ahead of schedule — rebuild trust through consistency.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Trust</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <!-- Hidden tips (revealed by "Show more" button) -->
+                <article class="tip-card hidden-tip" data-tip-id="tip-013">
+                    <h3>Don't over-explain</h3>
+                    <p>Long explanations sound defensive. Keep it short: apologize, give one reason, move to solutions. The more you talk, the less believable you sound.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Communication</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card hidden-tip" data-tip-id="tip-014">
+                    <h3>Match communication style</h3>
+                    <p>If they texted, text back. If they called, call. Matching their effort level shows respect and makes your response feel more genuine.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Communication</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+
+                <article class="tip-card hidden-tip" data-tip-id="tip-015">
+                    <h3>Prepare for follow-ups</h3>
+                    <p>If you give an excuse, remember the details. Getting caught in inconsistencies is worse than the original slip-up.</p>
+                    <div class="tip-meta">
+                        <small class="tip-tag">Strategy</small>
+                        <small class="tip-date">Dec 2024</small>
+                    </div>
+                    <div class="tip-actions">
+                        <button class="copy-tip-btn" aria-label="Copy tip to clipboard">Copy</button>
+                        <button class="save-tip-btn">Save</button>
+                        <button class="rate-tip-btn">👍</button>
+                    </div>
+                </article>
+            </div>
+
+            <button id="show-more-tips" class="show-more-btn">Show more tips</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Caught-Slippin</h3>
+                    <p>Find the right words when you need them most.</p>
+                    <p class="legal-notice">Use responsibly. We do not endorse lying about crimes, legal issues, or medical emergencies. By using this site you accept our Terms.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#generator">Generator</a></li>
+                        <li><a href="#tips">Tips</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                        <li><a href="/cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>More Tools</h4>
+                    <p><a href="https://dailyhelphub.com/?utm_source=caught-slippin&utm_medium=footer&utm_campaign=more_tools" target="_blank" rel="noopener">DailyHelpHub</a> — your hub for all our sites.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Caught-Slippin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast notification for copy actions -->
+    <div id="toast" class="toast"></div>
+
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>
